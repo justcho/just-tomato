@@ -1,69 +1,18 @@
-// pages/home/home.js
-Page({
 
-  /**
-   * 页面的初始数据
-   */
+Page({
   data: {
     lists: [
-      { id: 1,text: "测试测试测试测试测试测试测试测试测试测试测试测试测试测试",selected: false}
+      { id: 1,text: "事实上是事实上事实上是事实上",selected: true},{ id: 2,text: "事实上是事实上事实上是事实上",selected: true},{ id: 3,text: "事实上是事实上事实上是事实上",selected: true},{ id: 4,text: "事实上是事实上事实上是事实上",selected: true},{ id: 5,text: "事实上是事实上事实上是事实上",selected: true},{ id: 6,text: "事实上是事实上事实上是事实上",selected: true},{ id: 7,text: "事实上是事实上事实上是事实上",selected: true}
     ],
-    visible: false
+    visibleConfirm: false
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  confirm(event){
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  calcel(event){
 
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+  destoryItem(){
 
   }
 })
