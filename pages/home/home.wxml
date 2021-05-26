@@ -1,18 +1,28 @@
-
 <view class="home-container">
   <scroll-view class="todoList" scroll-y="true">
-     <view class="item" wx:for="{{lists}}">
-      <view class="select"></view>
-      <text>{{item.text}}</text>
-    </view> 
+    <view class="item" 
+          wx:for="{{lists}}" 
+          wx:for-index="index" 
+          wx:key="{{item.id}}"   
+          wx:if="{{!item.completed}}"
+          >
+      <view class="select" hover-class='active'
+            bindtap='destroyTodo'
+            data-index="{{index}}" 
+            data-id="{{item.id}}" ></view>
+      <text bindtap="changeText" 
+            data-index="{{index}}" 
+            data-id="{{item.id}}" 
+            data-content="{{item.description}}">{{item.description}}</text>
+    </view>
   </scroll-view>
-
-  <g-button type="change" class="createButton" text="创建任务" bindtap='showCreateConfirm'></g-button>
+  <g-button type="change" class="createButton" text="创建任务" bindtap='showCreateConfirm'>创建任务</g-button>
   <view class="tomato-wrapper">
-    <navigator class="tomato" url="/pages/tomato/tomato">
-     <g-clock text="点击开始闹钟"></g-clock>
+    <navigator class="tomato" url="/pages/tomato/tomato" bindtap='vibrate' hover-class="none">
+     <g-clock text="点击开始专注"></g-clock>
     </navigator>
-</view>
-<g-confirm placeholder="我完成了什么" bindconfirm="confirm" bindcancel="cancel" visible="{{visible}}"></g-confirm>
-</view>
+  </view>
+  <g-confirm  bindconfirm="confirmCreate" bindcancel="hideCreateConfirm" visible="{{visibleCreateConfirm}}"></g-confirm>
 
+  <g-confirm  bindconfirm="confirmUpdate" value="{{updateContent}}" bindcancel="hideUpdateConfirm" visible="{{visibleUpdateConfirm}}"></g-confirm>
+</view>

@@ -1,14 +1,16 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/home/home",
+    "pages/me/me",
     "pages/tomato/tomato",
-    "pages/me/me"
+    "pages/binding/binding"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "朗朗番茄钟",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#F26653",
+    "navigationBarTitleText": "Simple Tomato",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#999",
